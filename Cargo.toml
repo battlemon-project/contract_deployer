@@ -1,0 +1,34 @@
+[package]
+name = "contracts_deployer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# async runtime
+tokio = { version = "1.27.0", features = ["macros", "rt-multi-thread"] }
+# sui
+sui-sdk = { git = "https://github.com/MystenLabs/sui", rev = "de632da6a" }
+sui-keys = { git = "https://github.com/MystenLabs/sui", rev = "de632da6a" }
+sui-framework = { git = "https://github.com/MystenLabs/sui", rev = "de632da6a" }
+sui-framework-build = { git = "https://github.com/MystenLabs/sui", rev = "de632da6a" }
+sui-types = { git = "https://github.com/MystenLabs/sui", rev = "de632da6a" }
+move-core-types = { git = "https://github.com/MystenLabs/sui", rev = "de632da6a" }
+shared-crypto = { git = "https://github.com/MystenLabs/sui", rev = "de632da6a" }
+# logging
+tracing = "0.1.37"
+tracing-subscriber = "0.3.16"
+tracing-bunyan-formatter = "0.3.6"
+tracing-log = "0.1.3"
+# errors
+eyre = "0.6.8"
+# http
+reqwest = { version = "0.11.14", features = ["json"] }
+# serialization
+serde = "1.0.159"
+serde_json = "1.0.93"
+# other
+config = { version = "0.13.3", feature = ["toml"] }
+dirs = "5.0.0"
+lazy-regex = "2.4.1"
+once_cell = "1.17.1"
+derive_builder = "0.12.0"
